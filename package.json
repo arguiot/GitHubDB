@@ -1,0 +1,19 @@
+{
+  "name": "githubdb",
+  "version": "1.0.0",
+  "description": "A database powered by the GitHub API, cause I can",
+  "main": "dist/ghdb.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arguiot/GitHubDB.git"
+  },
+  "author": "Arthur Guiot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arguiot/GitHubDB/issues"
+  },
+  "homepage": "https://github.com/arguiot/GitHubDB#readme"
+}
