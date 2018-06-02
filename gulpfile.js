@@ -8,7 +8,7 @@ const injectVersion = require("gulp-inject-version")
 gulp.task("modern", () => {
 	gulp.src("src/base.js")
 		.pipe(rigger())
-		.pipe(injectVersion())
+		// .pipe(injectVersion())
 		.pipe(rename({
 			basename: "ghdb",
 			suffix: ".es7"
@@ -18,7 +18,7 @@ gulp.task("modern", () => {
 gulp.task("minify", () => {
 	gulp.src("src/base.js")
 		.pipe(rigger())
-		.pipe(injectVersion())
+		// .pipe(injectVersion())
 		.pipe(babili({
 			mangle: {
 				keepClassName: true
@@ -33,7 +33,7 @@ gulp.task("minify", () => {
 gulp.task("old", () => {
 	gulp.src("src/base.js")
 		.pipe(rigger())
-		.pipe(injectVersion())
+		// .pipe(injectVersion())
 		.pipe(babel({
 			presets: ["env"]
 		}))
@@ -45,7 +45,7 @@ gulp.task("old", () => {
 gulp.task("minify-old", () => {
 	gulp.src("src/base.js")
 		.pipe(rigger())
-		.pipe(injectVersion())
+		// .pipe(injectVersion())
 		.pipe(babel({
 			presets: ["env"]
 		}))
@@ -59,7 +59,7 @@ gulp.task("minify-old", () => {
 gulp.task("tests", () => {
 	gulp.src("src/base.js")
 		.pipe(rigger())
-		.pipe(injectVersion())
+		// .pipe(injectVersion())
 		.pipe(rename({
 			basename: "ghdb"
 		}))
