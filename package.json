@@ -1,5 +1,5 @@
 {
-    "name": "githubdb",
+    "name": "ghdb",
     "version": "1.0.0",
     "description": "A database powered by the GitHub API, cause I can",
     "main": "dist/ghdb.js",
