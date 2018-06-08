@@ -24,10 +24,12 @@ var GHDB = function () {
 	_createClass(GHDB, [{
 		key: "push",
 		value: function push(data) {
+			var blob = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
 			var _this = this;
 
-			var sha = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
-			var msg = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "GitHubDB update";
+			var sha = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "";
+			var msg = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : "GitHubDB update";
 
 			return new Promise(function (resolve, reject) {
 				var head = new Headers({

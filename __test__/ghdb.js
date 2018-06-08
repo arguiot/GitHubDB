@@ -25,7 +25,7 @@ class GHDB {
 			})
 		});
 	}
-	push(data, sha="", msg="GitHubDB update") {
+	push(data, blob=false, sha="", msg="GitHubDB update") {
 		return new Promise((resolve, reject) => {
 			const head = new Headers({
 				"Authorization": `token ${this.token}`
