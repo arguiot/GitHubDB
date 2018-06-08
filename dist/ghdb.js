@@ -36,7 +36,7 @@ var GHDB = function () {
 				fetch(_this.genString, {
 					method: "PUT",
 					headers: head,
-					body: "\n\t\t\t\t{\n\t\t\t\t\t\"message\": \"" + msg + "\",\n\t\t\t\t\t\"commiter\": {\n\t\t\t\t\t\t\"name\": \"" + _this.commiter.name + "\",\n\t\t\t\t\t\t\"email\": \"" + _this.commiter.email + "\",\n\t\t\t\t\t},\n\t\t\t\t\tcontent: \"" + window.btoa(unescape(encodeURIComponent(JSON.stringify(data)))) + "\",\n\t\t\t\t\t\"sha\": \"" + sha + "\"\n\t\t\t\t}\n\t\t\t\t"
+					body: "\n\t\t\t\t{\n\t\t\t\t\t\"message\": \"" + msg + "\",\n\t\t\t\t\t\"commiter\": {\n\t\t\t\t\t\t\"name\": \"" + _this.commiter.name + "\",\n\t\t\t\t\t\t\"email\": \"" + _this.commiter.email + "\",\n\t\t\t\t\t},\n\t\t\t\t\tcontent: \"" + (blob == false ? window.btoa(unescape(encodeURIComponent(JSON.stringify(data)))) : data) + "\",\n\t\t\t\t\t\"sha\": \"" + sha + "\"\n\t\t\t\t}\n\t\t\t\t"
 				}).then(function (data) {
 					return data.json();
 				}).then(function (data) {

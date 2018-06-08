@@ -40,7 +40,7 @@ class GHDB {
 						"name": "${this.commiter.name}",
 						"email": "${this.commiter.email}",
 					},
-					content: "${window.btoa(unescape(encodeURIComponent( JSON.stringify(data) )))}",
+					content: "${blob == false ? window.btoa(unescape(encodeURIComponent( JSON.stringify(data) ))) : data}",
 					"sha": "${sha}"
 				}
 				`
